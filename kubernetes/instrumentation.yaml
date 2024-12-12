@@ -1,7 +1,7 @@
 apiVersion: newrelic.com/v1alpha2
 kind: Instrumentation
 metadata:
-  name: newrelic-instrumentation
+  name: newrelic-instrumentation-python
   namespace: newrelic
 spec:
   agent:
@@ -24,7 +24,7 @@ spec:
 apiVersion: newrelic.com/v1alpha2
 kind: Instrumentation
 metadata:
-  name: newrelic-instrumentation
+  name: newrelic-instrumentation-nodejs
   namespace: newrelic
 spec:
   agent:
