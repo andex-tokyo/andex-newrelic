@@ -1,0 +1,3 @@
+resources:
+  - newrelic.yaml.yaml
+  - sealed-newrelic-secret.yaml
