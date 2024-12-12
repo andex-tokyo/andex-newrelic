@@ -1259,7 +1259,7 @@ data:
     # This is the configuration file for the infrastructure agent. See:
     # https://docs.newrelic.com/docs/infrastructure/install-infrastructure-agent/configuration/infrastructure-agent-configuration-settings/
     custom_attributes:
-      clusterName: orbstack
+      clusterName: andex-orbstack
     http_server_enabled: true
     http_server_port: 8001
     is_forward_only: true
@@ -1358,7 +1358,7 @@ spec:
             - name: "NRI_KUBERNETES_SINK_HTTP_PORT"
               value: "8001"
             - name: "NRI_KUBERNETES_CLUSTERNAME"
-              value: orbstack
+              value: andex-orbstack
             - name: "NRI_KUBERNETES_VERBOSE"
               value: "false"
 
@@ -1662,7 +1662,7 @@ data:
     # This is the configuration file for the infrastructure agent. See:
     # https://docs.newrelic.com/docs/infrastructure/install-infrastructure-agent/configuration/infrastructure-agent-configuration-settings/
     custom_attributes:
-      clusterName: orbstack
+      clusterName: andex-orbstack
     http_server_enabled: true
     http_server_port: 8002
     is_forward_only: true
@@ -1714,7 +1714,7 @@ spec:
             - name: "NRI_KUBERNETES_SINK_HTTP_PORT"
               value: "8002"
             - name: "NRI_KUBERNETES_CLUSTERNAME"
-              value: orbstack
+              value: andex-orbstack
             - name: "NRI_KUBERNETES_VERBOSE"
               value: "false"
 
@@ -1848,7 +1848,7 @@ data:
     # This is the configuration file for the infrastructure agent. See:
     # https://docs.newrelic.com/docs/infrastructure/install-infrastructure-agent/configuration/infrastructure-agent-configuration-settings/
     custom_attributes:
-      clusterName: orbstack
+      clusterName: andex-orbstack
     features:
       docker_enabled: false
     http_server_enabled: true
@@ -1904,7 +1904,7 @@ spec:
             - name: "NRI_KUBERNETES_SINK_HTTP_PORT"
               value: "8003"
             - name: "NRI_KUBERNETES_CLUSTERNAME"
-              value: orbstack
+              value: andex-orbstack
             - name: "NRI_KUBERNETES_VERBOSE"
               value: "false"
 
@@ -1966,7 +1966,7 @@ spec:
                   apiVersion: "v1"
                   fieldPath: "spec.nodeName"
             - name: "CLUSTER_NAME"
-              value: orbstack
+              value: andex-orbstack
             - name: "NRIA_PASSTHROUGH_ENVIRONMENT"
               value: "CLUSTER_NAME"
             - name: "NRIA_HOST"
@@ -2277,7 +2277,7 @@ spec:
                   name: nri-bundle-newrelic-logging-config
                   key: license
             - name: CLUSTER_NAME
-              value: orbstack
+              value: andex-orbstack
             - name: LOG_LEVEL
               value: "info"
             - name: LOG_PARSER
@@ -2445,7 +2445,7 @@ data:
         - localhost:9090
     common:
       external_labels:
-        cluster_name: orbstack
+        cluster_name: andex-orbstack
       scrape_interval: 30s
     kubernetes:
       jobs:
@@ -2700,7 +2700,7 @@ data:
       - name: newRelicInfra
         config:
           agentEndpoint: http://localhost:8001/v1/data
-          clusterName: orbstack
+          clusterName: andex-orbstack
           agentHTTPTimeout: 30s
     captureDescribe: true
     describeRefresh: 24h
@@ -3074,7 +3074,7 @@ spec:
         imagePullPolicy: IfNotPresent
         env:
         - name: clusterName
-          value: orbstack
+          value: andex-orbstack
         ports:
           - containerPort: 8443
             protocol: TCP
