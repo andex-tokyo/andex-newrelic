@@ -1,3 +1,4 @@
 resources:
   - newrelic.yaml
   - sealed-newrelic-secret.yaml
+  - instrumentation.yaml
