@@ -24,7 +24,7 @@ spec:
 apiVersion: newrelic.com/v1alpha2
 kind: Instrumentation
 metadata:
-  name: newrelic-instrumentation-nodejs
+  name: newrelic-instrumentation-ruby
   namespace: newrelic
 spec:
   agent:
