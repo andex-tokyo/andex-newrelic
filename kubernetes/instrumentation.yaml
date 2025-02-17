@@ -39,3 +39,24 @@ spec:
       - key: "kubernetes.io/metadata.name"
         operator: "In"
         values: ["dify"]
+
+---
+
+apiVersion: newrelic.com/v1alpha2
+kind: Instrumentation
+metadata:
+  name: newrelic-instrumentation-nodejs
+  namespace: newrelic
+spec:
+  agent:
+    # Values supported: dotnet, java, nodejs, python, ruby, php
+    language: ruby
+
+    # Values supported: newrelic-java-init:latest, newrelic-dotnet-init:latest, newrelic-node-init:latest, newrelic-python-init:latest, newrelic-ruby-init:latest, newrelic-php-init:latest, newrelic-php-init:musl
+    image: newrelic/newrelic-ruby-init:latest
+  # Select a namespace with a specific name
+  namespaceLabelSelector:
+    matchExpressions:
+      - key: "kubernetes.io/metadata.name"
+        operator: "In"
+        values: ["docuseal"]
